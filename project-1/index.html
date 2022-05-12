@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <title>BougieFoodie</title>
+</head>
+
+<!-- Two Boxes - 1 for Recipe videos and 1 for Wikipedia info-->
+
+<body>
+    <header class="py-3 text-center">
+        <div>
+            <h2>
+                <a href="."><img id="header-logo" src="./assets/images/Bougie Foodie-logos/Bougie Foodie-logos_transparent.png" alt="Bougie Foodie Logo" class="mh-25 mw-25 mb-3" /></a>
+            </h2>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="text-center py-3" style="background-color: var(--searchbar-color);">
+            <p class="h1"><strong>Find a Recipe!</strong></p>
+            <form id="search-bar" class="d-flex justify-content-center mt-3">
+                <input id="search-field" type="search" name="search-field" class="form-control rounded w-50 mx-3" placeholder="Enter a Food"/>
+                    
+                <button id="search-button" type="submit" class="btn btn-outline-danger h-50 mt-auto" form="search-bar">Search &#x1F50D;</button>
+
+            </form>
+        </section>
+
+        <section class="row">       
+            <div class="sidenav col-2" style="background-color: var(--sidebar-color);">
+                <h5 class="text-center">More Videos: </h5>
+                <div class="h-50 text-center overflow-auto">
+                    
+                    <ul id="suggested-list">
+                        <li class="card text-center rounded-0" style="background-color: inherit;">
+                            <div class="card-body">
+                                <h5 class="card-title" id="cap1"></h5>
+                                <img id="suggest1" class="image-btn mh-100 mh-100" src="" height="90" weight="120" alt="">    
+                             </div>
+                             
+                        </li>
+                        <li class="card text-center" style="background-color: inherit;">
+                            
+                             <div class="card-body">
+                                <h5 class="card-title" id="cap2"></h5>
+                                <img id="suggest2" class="image-btn mh-100 mh-100" src="" height="90" weight="120" alt="">    
+                             </div>
+                        </li>
+                        <li class="card text-center" style="background-color: inherit;">
+                            
+                             <div class="card-body">
+                                <h5 class="card-title" id="cap3"></h5>
+                                <img id="suggest3" class="image-btn mh-100 mh-100" src="" alt="">    
+                             </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="border-top-3 text-white">
+                <div class="h-50 text-center">
+                    <h5 class="card-title">Recent Searches: </h5>
+                    <ul id="local-list">
+                    </ul>
+                    <button id="reset-button" type="submit" class="btn btn-dark mt-auto">Clear History</button>
+                </div>
+            </div>
+
+
+            <div class="col d-flex justify-content-center align-items-center row" id="main-content" style="background-color: var(--background-color);">
+                <div class="d-flex text-center py-5">
+                    
+                    <div class="content-box w-50 justify-content-center align-items-center text-center pb-3 mr-3">
+                        <p>
+                            Below you will find a youtube video linked to help show you how to make this recipe! 
+                        </p>
+                        <iframe id="video" class="h-100 w-100" src="" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="content-box w-50 pb-3 ml-3">
+                        <div>
+                            <p>
+                            Below is a wikipedia article that gives you  little background on your recipe. You can share this with your friends and get a little bougie with your food(ie).
+                            </p>
+                        </div>
+                        
+                        <div class="h-100 position-relative overflow-hidden">
+                            <iframe class="pb-3 position-absolute" id="wikiframe" src="" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="text-center my-4 px-4">
+                    <p class="h3 font-weight-bold">About Us</p>
+                    <p class="description">
+                        Our team is made up of professionals from different backgrounds and interests, with hopes to pivot into the field of web development. 
+                        Currently, we are enrolled part-time in Georgia Tech’s Full Stack Coding Boot Camp. Collectively, we have a wide range of experiences from the food industry, 
+                        international education, manual labor, and the tech field. Although we may have different life experiences, we came together with a common goal to create the BougieFoodie. 
+                        We hope you enjoy our project!
+                    </p>
+
+                    <p class="h3 mt-5 font-weight-bold">Why BougieFoodie?</p>
+                    <p class="mb-3 description" >
+                        The concept came about after we discovered our team’s deep passion for food and social media. 
+                        We wanted to design a space where the beginner and expert cooks could not only search for their favorite recipes 
+                        but watch how the meal is prepared while learning the origin/history of the dish simultaneously.
+                    </p>
+                </div>
+            </div>
+    </main>
+
+    
+    </main>
+    
+    <footer class="py-3 d-flex text-center justify-content-center">
+        <div class="row">
+
+            <a href="#" class="m-5"><img id="footer-logo" src="./assets/images/Bougie Foodie-logos/Bougie Foodie-logos_transparent.png" alt="Bougie Foodie Logo" /></a>
+            
+            <nav class="">
+                <ul>
+                    <li>
+                        <h2>Meet The Team: </h2>
+
+                    </li>
+
+                    <li class="footer-font">
+                        <p>Jimmy Reilly: <a href="https://github.com/WanderingLad" class="text-info">github.com/WanderingLad</a></p>
+                    </li>
+
+                    <li class="footer-font">
+                        <p>Marvin Bolanos: <a href="https://github.com/bo1anos" class="text-info">github.com/bo1anos</a></p>
+                    </li>
+
+                    <li class="footer-font">
+                        <p>Michael Marlowe: <a href="https://github.com/MarloweMich" class="text-info">github.com/MarloweMich</a></p>
+                    </li>
+
+                    <li class="footer-font">
+                        <p>Stephanie Mathis: <a href="https://github.com/Sdm1984" class="text-info">github.com/Sdm1984</a></p>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script type="text/javascript" src="./assets/js/script.js"></script>
+
+</html>
